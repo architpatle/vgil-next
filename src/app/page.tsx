@@ -1,13 +1,9 @@
-export default function Home() {
+import Hero from "@/components/Home/Hero";
+
+export default function HomePage() {
   return (
     <>
-      <section
-        id="hero"
-        className="h-screen flex items-center justify-center bg-slate-900 text-white"
-      >
-        <h1 className="text-6xl font-bold">Hero Section</h1>
-      </section>
-
+      <Hero />
       <section className="min-h-screen bg-white flex items-center justify-center">
         <h2 className="text-5xl font-bold text-black">
           Scroll Down

@@ -1,0 +1,1290 @@
+/* ===========================================
+   HERO SECTION
+=========================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #05070f;
+  isolation: isolate;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+
+  gap: 80px;
+
+  min-height: 100vh;
+
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+/* ===========================================
+   BACKGROUND
+=========================================== */
+
+.grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  opacity: .35;
+
+  z-index: 1;
+}
+
+.grid::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+      radial-gradient(circle at center,
+      transparent 0%,
+      rgba(5,7,15,.20) 55%,
+      rgba(5,7,15,.95) 100%);
+}
+
+/* ===========================================
+   GLOWS
+=========================================== */
+
+.glow1 {
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  border-radius: 50%;
+
+  background: rgba(225,6,0,.18);
+
+  filter: blur(130px);
+
+  top: -180px;
+
+  left: -220px;
+
+  z-index: 0;
+
+}
+
+.glow2 {
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.06);
+
+  filter: blur(120px);
+
+  bottom: -160px;
+
+  right: -160px;
+
+  z-index: 0;
+
+}
+
+/* ===========================================
+   LEFT
+=========================================== */
+
+.left {
+
+position:relative;
+
+z-index:10;
+
+}
+
+.badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(16px);
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:28px;
+
+}
+
+.badge svg{
+
+color:#E10600;
+
+}
+
+/* ===========================================
+   TITLE
+=========================================== */
+
+.title{
+
+font-size:72px;
+
+line-height:1.05;
+
+font-weight:800;
+
+color:#fff;
+
+margin-bottom:28px;
+
+letter-spacing:-2px;
+
+}
+
+.ai{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+flex-wrap:wrap;
+
+margin-top:12px;
+
+}
+
+.wordBox{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+min-width:180px;
+
+height:72px;
+
+padding:0 24px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#E10600,#ff4a4a);
+
+color:#fff;
+
+font-size:38px;
+
+font-weight:800;
+
+box-shadow:
+
+0 18px 40px rgba(225,6,0,.35);
+
+}
+
+/* ===========================================
+   DESCRIPTION
+=========================================== */
+
+.description{
+
+max-width:620px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:rgba(255,255,255,.72);
+
+margin-bottom:42px;
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.buttons{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.primaryBtn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:18px 34px;
+
+border-radius:999px;
+
+background:#E10600;
+
+color:#fff;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(225,6,0,.28);
+
+}
+
+.primaryBtn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 20px 45px rgba(225,6,0,.35);
+
+}
+
+.secondaryBtn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 34px;
+
+border-radius:999px;
+
+border:1px solid rgba(255,255,255,.18);
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(14px);
+
+color:#fff;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.secondaryBtn:hover{
+
+background:rgba(255,255,255,.10);
+
+transform:translateY(-4px);
+
+}
+
+/* ===========================================
+   RIGHT SIDE
+=========================================== */
+
+.right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================================
+   DASHBOARD
+=========================================== */
+
+.dashboard {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+
+  padding: 32px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+}
+
+.dashboard::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.08),
+      transparent 60%
+    );
+
+  pointer-events: none;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 34px;
+}
+
+.dashboardLabel {
+  font-size: 12px;
+
+  color: rgba(255,255,255,.6);
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 6px;
+}
+
+.dashboardHeader h3 {
+  color: #fff;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.score {
+  width: 82px;
+  height: 82px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+      135deg,
+      #E10600,
+      #ff5555
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 16px 35px rgba(225,6,0,.4);
+}
+
+/* ===========================================
+   GRAPH PLACEHOLDER
+=========================================== */
+
+.chartArea {
+  position: relative;
+
+  height: 230px;
+
+  margin-bottom: 30px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.02)
+    );
+
+  overflow: hidden;
+}
+
+.chartArea::before {
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+      linear-gradient(
+          rgba(255,255,255,.05) 1px,
+          transparent 1px
+      ),
+      linear-gradient(
+          90deg,
+          rgba(255,255,255,.05) 1px,
+          transparent 1px
+      );
+
+  background-size:40px 40px;
+
+  opacity:.35;
+
+}
+
+/* ===========================================
+   STATS
+=========================================== */
+
+.statsGrid {
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.statCard{
+
+padding:22px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.statCard:hover{
+
+transform:translateY(-5px);
+
+background:rgba(255,255,255,.08);
+
+}
+
+.statCard span{
+
+display:block;
+
+font-size:13px;
+
+color:rgba(255,255,255,.55);
+
+margin-bottom:8px;
+
+}
+
+.statCard h4{
+
+margin:0;
+
+font-size:28px;
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+/* ===========================================
+   FLOATING CARDS
+=========================================== */
+
+.floatCard{
+
+position:absolute;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:14px 20px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.20);
+
+color:#fff;
+
+font-weight:600;
+
+}
+
+/* Card Positions */
+
+.card0{
+
+top:40px;
+
+left:-50px;
+
+}
+
+.card1{
+
+top:150px;
+
+right:-60px;
+
+}
+
+.card2{
+
+bottom:135px;
+
+left:-70px;
+
+}
+
+.card3{
+
+bottom:30px;
+
+right:-40px;
+
+}
+
+/* ===========================================
+   SCROLL
+=========================================== */
+
+.scroll{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.55);
+
+z-index:10;
+
+}
+
+/* ===========================================
+   CHART
+=========================================== */
+
+.chartSvg{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+overflow:visible;
+
+}
+
+.chartLine{
+
+fill:none;
+
+stroke:url(#lineGradient);
+
+stroke-width:4;
+
+stroke-linecap:round;
+
+stroke-linejoin:round;
+
+stroke-dasharray:1200;
+
+stroke-dashoffset:1200;
+
+animation:drawLine 3s ease forwards;
+
+filter:drop-shadow(0 0 12px rgba(225,6,0,.45));
+
+}
+
+.chartFill{
+
+fill:url(#fillGradient);
+
+opacity:.75;
+
+animation:fadeFill 2.2s ease forwards;
+
+}
+
+.chartPoint{
+
+fill:#ffffff;
+
+stroke:#E10600;
+
+stroke-width:3;
+
+transform-origin:center;
+
+animation:pulsePoint 2s infinite;
+
+}
+
+/* ===========================================
+   LIVE STATS
+=========================================== */
+
+.liveStats{
+
+position:absolute;
+
+left:24px;
+
+right:24px;
+
+bottom:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:18px;
+
+}
+
+.liveStats div{
+
+flex:1;
+
+padding:16px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+text-align:center;
+
+}
+
+.liveStats span{
+
+display:block;
+
+font-size:12px;
+
+color:rgba(255,255,255,.55);
+
+margin-bottom:6px;
+
+}
+
+.liveStats strong{
+
+font-size:20px;
+
+color:#fff;
+
+font-weight:700;
+
+}
+
+/* ===========================================
+   FLOATING DASHBOARD
+=========================================== */
+
+.dashboard{
+
+animation:floatDashboard 7s ease-in-out infinite;
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes drawLine{
+
+to{
+
+stroke-dashoffset:0;
+
+}
+
+}
+
+@keyframes fadeFill{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:.75;
+
+}
+
+}
+
+@keyframes pulsePoint{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.5);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+@keyframes floatDashboard{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================================
+   WORD BOX
+=========================================== */
+
+.wordBox {
+  position: relative;
+
+  overflow: hidden;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 200px;
+
+  height: 72px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #E10600,
+    #ff4a4a
+  );
+
+  box-shadow:
+    0 20px 45px rgba(225,6,0,.35);
+}
+
+.word {
+  position: absolute;
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  color: white;
+
+  letter-spacing: 1px;
+}
+
+/* ===========================================
+   DESKTOP ONLY
+=========================================== */
+
+.desktopOnly {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+
+  .desktopOnly {
+    display: none !important;
+  }
+
+}
+
+/* ======================================================
+   RESPONSIVE - TABLET
+====================================================== */
+
+@media (max-width: 1024px) {
+
+  .hero {
+    min-height: auto;
+    padding: 140px 0 80px;
+  }
+
+  .heroContent {
+
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+
+    min-height: auto;
+
+    text-align: center;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
+  .left {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+  .badge {
+
+    margin-bottom: 24px;
+
+  }
+
+  .title {
+
+    font-size: 60px;
+
+  }
+
+  .description {
+
+    max-width: 700px;
+
+    margin-inline: auto;
+
+  }
+
+  .buttons {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+  }
+
+  .right {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+
+  .dashboard {
+
+    max-width: 720px;
+
+  }
+
+  .card0 {
+
+    left: 10px;
+
+    top: -20px;
+
+  }
+
+  .card1 {
+
+    right: 10px;
+
+    top: 50px;
+
+  }
+
+  .card2 {
+
+    left: 0;
+
+    bottom: 40px;
+
+  }
+
+  .card3 {
+
+    right: 0;
+
+    bottom: -20px;
+
+  }
+
+}
+
+/* ======================================================
+   RESPONSIVE - MOBILE
+====================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+  min-height: 100svh;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.heroContent {
+
+  min-height: calc(100svh - 80px);
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.left {
+
+  max-width: 100%;
+
+}
+  .hero {
+
+    padding: 120px 0 70px;
+
+  }
+
+  .heroContent {
+
+    gap: 50px;
+
+  }
+
+  .title {
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+  }
+
+  .ai {
+
+    justify-content: center;
+
+    gap: 12px;
+
+  }
+
+  .wordBox {
+
+    width: 150px;
+
+    min-width: 150px;
+
+    height: 56px;
+
+    border-radius: 14px;
+
+  }
+
+  .word {
+
+    font-size: 28px;
+
+  }
+
+  .description {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+  }
+
+  .buttons {
+
+    width: 100%;
+
+    flex-direction: column;
+
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+
+    width: 100%;
+
+    justify-content: center;
+
+  }
+
+  .dashboard {
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+  }
+
+  .dashboardHeader {
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: center;
+
+  }
+
+  .score {
+
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 16px;
+
+  }
+
+  .chartArea {
+
+    height: 180px;
+
+  }
+
+  .statsGrid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  /* Floating cards become normal cards */
+
+  .floatCard {
+
+    position: static;
+
+    width: 100%;
+
+    justify-content: center;
+
+  }
+
+  .right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+  }
+
+  .scroll {
+
+    display: none;
+
+  }
+
+}
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+
+    padding: 110px 0 60px;
+
+  }
+
+  .title {
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+  }
+
+  .badge {
+
+    font-size: 12px;
+
+    padding: 8px 14px;
+
+  }
+
+  .wordBox {
+
+    width: 125px;
+
+    min-width: 125px;
+
+    height: 48px;
+
+  }
+
+  .word {
+
+    font-size: 22px;
+
+  }
+
+  .description {
+
+    font-size: 15px;
+
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+
+    padding: 16px 20px;
+
+    font-size: 15px;
+
+  }
+
+  .dashboard {
+
+    padding: 18px;
+
+  }
+
+  .dashboardHeader h3 {
+
+    font-size: 20px;
+
+  }
+
+  .chartArea {
+
+    height: 150px;
+
+  }
+
+  .liveStats {
+
+    position: static;
+
+    margin-top: 18px;
+
+    flex-direction: column;
+
+  }
+
+  .statCard {
+
+    padding: 18px;
+
+  }
+
+}
+
