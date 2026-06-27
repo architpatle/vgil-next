@@ -52,9 +52,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const heroHeight = window.innerHeight * 0.8;
-
-            setPastHero(window.scrollY > heroHeight);
+            setPastHero(window.scrollY > 40);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -74,13 +72,16 @@ export default function Navbar() {
 
     return (
         <>
-            <header
-                className={clsx(
-                    styles.navbar,
-                    pastHero && styles.scrolled
-                )}
-            >
-                <div className={styles.navInner}>
+           <header className={styles.navbar}>
+
+    <div className="max-w-7xl mx-auto px-6 h-full">
+
+        <div
+            className={clsx(
+                styles.navInner,
+                pastHero && styles.scrolled
+            )}
+        >
                     {/* Logo */}
 
                     <Link href="/" className={styles.logo}>
@@ -136,6 +137,7 @@ export default function Navbar() {
                             <Menu size={30} />
                         )}
                     </button>
+                </div>
                 </div>
             </header>
 

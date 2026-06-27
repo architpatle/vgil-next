@@ -1,0 +1,364 @@
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(225, 6, 0, 0.08);
+
+  color: #E10600;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 22px;
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.heading {
+  font-size: clamp(2.125rem, 4vw, 3.25rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: #111827;
+
+  margin-bottom: 24px;
+}
+
+.description {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: #6B7280;
+}
+
+.description strong {
+  color: #E10600;
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #ECECEC;
+
+  border-radius: 24px;
+
+  padding: 28px;
+
+  transition: all .4s ease;
+
+  box-shadow:
+      0 10px 35px rgba(15,23,42,.05);
+
+}
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #E10600;
+
+  box-shadow:
+      0 24px 60px rgba(15,23,42,.10);
+
+}
+
+/* ==========================================================
+   TOP
+========================================================== */
+
+.cardTop {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+
+}
+
+.iconBox {
+
+  width: 56px;
+
+  height: 56px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+      135deg,
+      #E10600,
+      #ff5b5b
+  );
+
+  color: white;
+
+  transition: .35s;
+
+  box-shadow:
+      0 15px 35px rgba(225,6,0,.20);
+
+}
+
+.card:hover .iconBox {
+
+  transform: rotate(-8deg) scale(1.05);
+
+}
+
+.arrow {
+
+  color: #C7CDD7;
+
+  transition: .35s;
+
+}
+
+.card:hover .arrow {
+
+  color: #E10600;
+
+  transform: translate(4px,-4px);
+
+}
+
+/* ==========================================================
+   NUMBER
+========================================================== */
+
+.number {
+
+  font-size: clamp(3rem, 5vw, 4rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+
+  color: #E10600;
+
+  margin-bottom: 18px;
+
+  transition: all .35s ease;
+
+}
+
+.card:hover .number {
+
+  transform: scale(1.05);
+
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.cardTitle {
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+
+}
+
+.cardSubtitle {
+
+  font-size: .95rem;
+
+  line-height: 1.75;
+
+  color: #6B7280;
+
+}
+
+/* ==========================================================
+   BOTTOM LINE
+========================================================== */
+
+.bottomLine {
+
+  width: 0;
+
+  height: 4px;
+
+  margin-top: 28px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #E10600,
+    #ff7272
+  );
+
+  transition: width .4s ease;
+
+}
+
+.card:hover .bottomLine {
+
+  width: 70px;
+
+}
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+.card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(225,6,0,.05);
+
+  top: -90px;
+
+  right: -90px;
+
+  transition: .45s ease;
+
+}
+
+.card:hover::before {
+
+  transform: scale(1.25);
+
+}
+
+.iconBox,
+.arrow,
+.number,
+.cardTitle,
+.cardSubtitle,
+.bottomLine {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+  .heading{
+
+    font-size:3rem;
+
+  }
+
+}
+
+@media (max-width:768px){
+
+  .heading{
+
+    font-size:2.4rem;
+
+  }
+
+  .description{
+
+    font-size:16px;
+
+  }
+
+  .card{
+
+    padding:24px;
+
+  }
+
+  .number{
+
+    font-size:3rem;
+
+  }
+
+  .cardTitle{
+
+    font-size:1.2rem;
+
+  }
+
+}
+
+@media (max-width:640px){
+
+  .heading{
+
+    font-size:2rem;
+
+  }
+
+  .eyebrow{
+
+    font-size:12px;
+
+    padding:8px 16px;
+
+  }
+
+  .card{
+
+    border-radius:20px;
+
+  }
+
+}
