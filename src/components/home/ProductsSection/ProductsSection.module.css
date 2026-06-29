@@ -1,0 +1,909 @@
+/* ==========================================================
+SECTION
+========================================================== */
+
+.section{
+
+    padding:140px 0;
+
+    background:#ffffff;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+HEADING
+========================================================== */
+
+.heading{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(225,6,0,.08);
+
+    color:#E10600;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.title{
+
+    font-size:clamp(2.5rem,4vw,3.8rem) ;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    letter-spacing:-1.5px;
+
+    color:#111827;
+
+    margin-bottom:24px;
+
+}
+
+.title span{
+
+    display:block;
+
+    color:#E10600;
+
+}
+
+.description{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#6B7280;
+
+}
+
+/* ==========================================================
+GRID
+========================================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:34px;
+
+}
+
+@media(max-width:992px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.section{
+
+padding:100px 0;
+
+}
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+    border:1px solid #ECECEC;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    box-shadow:
+
+        0 15px 45px rgba(15,23,42,.05);
+
+}
+
+.card:hover{
+
+    border-color:rgba(225,6,0,.18);
+
+    box-shadow:
+
+        0 30px 80px rgba(15,23,42,.10);
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.imageContainer{
+
+    position:relative;
+
+    height:320px;
+
+    overflow:hidden;
+
+    cursor:none;
+
+}
+
+.productImage{
+
+    object-fit:cover;
+
+    transition:transform .8s ease;
+
+}
+
+.card:hover .productImage{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   IMAGE OVERLAY
+========================================================== */
+
+.imageOverlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(17,24,39,.45),
+
+        rgba(17,24,39,.08),
+
+        transparent
+
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.card:hover .imageOverlay{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   PRODUCT NUMBER
+========================================================== */
+
+.productId{
+
+    position:absolute;
+
+    top:22px;
+
+    right:22px;
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.82);
+
+    color:#111827;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    z-index:20;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+   GLASS LOGO
+========================================================== */
+
+.logoGlass{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:10;
+
+    transition:.45s;
+
+}
+
+.card:hover .logoGlass{
+
+    transform:
+
+        translate(-50%,-50%)
+
+        scale(1.05);
+
+}
+
+.logo{
+
+    width:120px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.45s;
+
+}
+
+.card:hover .logo{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================================
+   CURSOR BUTTON
+========================================================== */
+
+.cursorButton{
+
+    position:absolute;
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:18px;
+
+    background:rgba(225,6,0,.95);
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    box-shadow:
+
+        0 25px 60px rgba(225,6,0,.28);
+
+    backdrop-filter:blur(12px);
+
+}
+
+/* ==========================================================
+   TOP ACCENT
+========================================================== */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #E10600,
+
+        #ff6d6d,
+
+        #ffb84d
+
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.45s;
+
+    z-index:50;
+
+}
+
+.card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:34px;
+
+}
+
+.contentHeader{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   CATEGORY
+========================================================== */
+
+.category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    background:color-mix(in srgb, var(--accent) 12%, white);
+
+    color:var(--accent);
+
+    border:1px solid color-mix(in srgb, var(--accent) 25%, white);
+
+}
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.titleCard{
+
+    font-size:30px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#ECECEC;
+
+    margin-bottom:24px;
+
+}
+
+/* ==========================================================
+   SUBHEADING
+========================================================== */
+
+.subHeading{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:#9CA3AF;
+
+    margin-bottom:14px;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.description{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#6B7280;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.featureList{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-bottom:34px;
+
+}
+
+.featureList li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:15px;
+
+    color:#374151;
+
+    transition:.35s;
+
+}
+
+.featureList li:hover{
+
+    transform:translateX(6px);
+
+}
+
+.featureList svg{
+
+    color:#10B981;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.learnMore{
+
+    width:fit-content;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#E10600;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 15px 35px rgba(225,6,0,.22);
+
+}
+
+.learnMore:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 20px 45px rgba(225,6,0,.28);
+
+}
+
+.learnMore svg{
+
+    transition:.35s;
+
+}
+
+.learnMore:hover svg{
+
+    transform:translateX(5px);
+
+}
+
+/* ==========================================================
+   DESKTOP
+========================================================== */
+
+.desktopContent{
+
+    display:block;
+
+}
+
+.mobileContent{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   MOBILE BUTTON
+========================================================== */
+
+.expandBtn{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F8FAFC;
+
+    color:#111827;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.expandBtn:hover{
+
+    background:#E10600;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media(max-width:992px){
+
+.card{
+
+border-radius:24px;
+
+}
+
+.imageContainer{
+
+height:260px;
+
+}
+
+.logoGlass{
+
+width:150px;
+
+height:150px;
+
+}
+
+.logo{
+
+width:95px;
+
+}
+
+.content{
+
+padding:28px;
+
+}
+
+.titleCard{
+
+font-size:26px;
+
+}
+
+.cursorButton{
+
+display:none;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:768px){
+
+.desktopContent{
+
+display:none;
+
+}
+
+.mobileContent{
+
+display:block;
+
+overflow:hidden;
+
+}
+
+.expandBtn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.imageContainer{
+
+height:220px;
+
+cursor:default;
+
+}
+
+.logoGlass{
+
+width:125px;
+
+height:125px;
+
+border-radius:24px;
+
+}
+
+.logo{
+
+width:80px;
+
+}
+
+.content{
+
+padding:24px;
+
+}
+
+.titleCard{
+
+font-size:22px;
+
+margin-bottom:10px;
+
+}
+
+.learnMore{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.featureList{
+
+margin-bottom:24px;
+
+}
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media(max-width:576px){
+
+.section{
+
+padding:80px 0;
+
+}
+
+.heading{
+
+margin-bottom:60px;
+
+}
+
+.titleCard{
+
+font-size:20px;
+
+}
+
+.description{
+
+font-size:15px;
+
+}
+
+.imageContainer{
+
+height:200px;
+
+}
+
+.logoGlass{
+
+width:110px;
+
+height:110px;
+
+}
+
+.logo{
+
+width:70px;
+
+}
+
+.productId{
+
+width:46px;
+
+height:46px;
+
+font-size:16px;
+
+}
+
+}

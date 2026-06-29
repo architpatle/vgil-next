@@ -1,0 +1,500 @@
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(225, 6, 0, .08);
+
+    color: #E10600;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.heading {
+
+    font-size: clamp(2.3rem, 4vw, 3.8rem);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: #111827;
+
+    margin-bottom: 24px;
+
+}
+
+.heading span {
+
+    display: block;
+
+    color: #E10600;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.description {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #6B7280;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.imageWrapper {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 18px 55px rgba(15, 23, 42, .08);
+
+    transition: .45s ease;
+
+}
+
+.imageWrapper:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 80px rgba(15, 23, 42, .14);
+
+}
+
+.productImage {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+
+    display: block;
+
+}
+
+.imageWrapper:hover .productImage {
+
+    transform: scale(1.08);
+
+}
+
+/* ==========================================================
+   PRODUCT NUMBER
+========================================================== */
+
+.productNumber {
+
+    position: absolute;
+
+    top: 22px;
+
+    left: 22px;
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(255,255,255,.88);
+
+    backdrop-filter: blur(16px);
+
+    color: #111827;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    z-index: 5;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.category {
+
+    width: fit-content;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(225, 6, 0, .08);
+
+    color: #E10600;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+}
+
+.title {
+
+    font-size: clamp(2rem, 3vw, 2.8rem);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    color: #111827;
+
+    margin-bottom: 22px;
+
+}
+
+.descriptionCard {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #6B7280;
+
+    margin-bottom: 34px;
+
+}
+
+/* ==========================================================
+   FEATURE CHIPS
+========================================================== */
+
+.featureWrap {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-bottom: 40px;
+
+}
+
+.featureChip {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E5E7EB;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: all .35s ease;
+
+}
+
+.featureChip:hover {
+
+    background: rgba(225,6,0,.08);
+
+    border-color: rgba(225,6,0,.25);
+
+    color: #E10600;
+
+    transform: translateY(-3px);
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.cta {
+
+    width: fit-content;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 28px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: #E10600;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .35s ease;
+
+    box-shadow:
+
+        0 15px 35px rgba(225,6,0,.22);
+
+}
+
+.cta span {
+
+    transition: .35s;
+
+}
+
+.cta:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+
+        0 22px 45px rgba(225,6,0,.30);
+
+}
+
+.cta:hover span {
+
+    transform: translateX(5px);
+
+}
+
+/* ==========================================================
+   IMAGE OVERLAY
+========================================================== */
+
+.imageWrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+
+        to top,
+
+        rgba(17,24,39,.25),
+
+        transparent 45%
+
+    );
+
+    opacity: 0;
+
+    transition: .45s;
+
+    z-index: 1;
+
+}
+
+.imageWrapper:hover::before {
+
+    opacity: 1;
+
+}
+
+/* ==========================================================
+   BORDER ACCENT
+========================================================== */
+
+.imageWrapper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    border: 2px solid transparent;
+
+    transition: .45s;
+
+}
+
+.imageWrapper:hover::after {
+
+    border-color: rgba(225,6,0,.25);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+    .content{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .featureWrap{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .heading{
+
+        font-size:2.3rem;
+
+    }
+
+    .description{
+
+        font-size:16px;
+
+    }
+
+    .title{
+
+        font-size:2rem;
+
+    }
+
+    .descriptionCard{
+
+        font-size:16px;
+
+    }
+
+    .imageWrapper{
+
+        border-radius:24px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .title{
+
+        font-size:1.75rem;
+
+    }
+
+    .productNumber{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:16px;
+
+        border-radius:14px;
+
+    }
+
+    .cta{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .featureChip{
+
+        font-size:13px;
+
+        padding:8px 14px;
+
+    }
+
+}

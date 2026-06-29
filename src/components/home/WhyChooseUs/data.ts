@@ -1,7 +1,7 @@
-import globe from "@/assets/images/globe.png";
-import bank from "@/assets/images/bank.png";
-import engineers from "@/assets/images/engineer.png";
-import ai from "@/assets/images/ai.png";
+import globe from "@/assets/images/Why-Choose-Us/globe.png";
+import bank from "@/assets/images/Why-Choose-Us/bank.png";
+import engineers from "@/assets/images/Why-Choose-Us/engineer.png";
+import ai from "@/assets/images/Why-Choose-Us/ai.png";
 
 export const accordionData = [
   {
