@@ -1,0 +1,803 @@
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.eyebrow {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 10px 18px;
+
+  margin-bottom: 22px;
+
+  border-radius: 999px;
+
+  background: rgba(225,6,0,.08);
+
+  color: #E10600;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+}
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+.heading {
+
+  font-size: clamp(2.3rem,4vw,3.4rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 26px;
+
+  letter-spacing: -1.5px;
+
+}
+
+.heading span{
+
+  display:block;
+
+  color:#E10600;
+
+}
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.description{
+
+  font-size:17px;
+
+  line-height:1.9;
+
+  color:#6B7280;
+
+  margin-bottom:42px;
+
+}
+
+/* ==========================================================
+   QUOTE CARD
+========================================================== */
+
+.quoteCard{
+
+  position:relative;
+
+  padding:28px;
+
+  border-radius:24px;
+
+  background:#fff;
+
+  border:1px solid #ECECEC;
+
+  box-shadow:
+      0 12px 35px rgba(15,23,42,.05);
+
+  transition:.35s;
+
+}
+
+.quoteCard:hover{
+
+  transform:translateY(-6px);
+
+  box-shadow:
+      0 24px 55px rgba(15,23,42,.10);
+
+}
+
+.quoteIcon{
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-bottom:20px;
+
+  background:linear-gradient(
+      135deg,
+      #E10600,
+      #ff6c6c
+  );
+
+  color:#fff;
+
+  font-size:22px;
+
+}
+
+.quoteCard p{
+
+  color:#4B5563;
+
+  line-height:1.8;
+
+  margin:0;
+
+}
+
+/* ==========================================================
+   DECORATIVE GRAPHIC
+========================================================== */
+
+.graphic{
+
+  position:relative;
+
+  width:100%;
+
+  height:260px;
+
+  margin-top:55px;
+
+  overflow:hidden;
+
+}
+
+/* ==========================================================
+   GLOW
+========================================================== */
+
+.graphicGlow{
+
+  position:absolute;
+
+  width:220px;
+
+  height:220px;
+
+  left:50%;
+
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:rgba(225,6,0,.08);
+
+  filter:blur(45px);
+
+}
+
+/* ==========================================================
+   OUTER CIRCLE
+========================================================== */
+
+.graphicCircle{
+
+  position:absolute;
+
+  left:50%;
+
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:180px;
+
+  height:180px;
+
+  border-radius:50%;
+
+  border:1px dashed rgba(225,6,0,.25);
+
+  animation:rotateCircle 18s linear infinite;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.graphicGrid{
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+
+  linear-gradient(
+      rgba(225,6,0,.08) 1px,
+      transparent 1px
+  ),
+
+  linear-gradient(
+      90deg,
+      rgba(225,6,0,.08) 1px,
+      transparent 1px
+  );
+
+  background-size:32px 32px;
+
+  mask-image:
+
+  radial-gradient(
+      circle,
+      black,
+      transparent 80%
+  );
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes rotateCircle{
+
+from{
+
+transform:
+translate(-50%,-50%)
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+translate(-50%,-50%)
+rotate(360deg);
+
+}
+
+}
+
+/* ==========================================================
+   ACCORDION ITEM
+========================================================== */
+
+.accordionItem{
+
+  position:relative;
+
+  margin-bottom:20px;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  background:#ffffff;
+
+  border:1px solid #ECECEC;
+
+  transition:all .45s ease;
+
+  cursor:pointer;
+
+}
+
+.accordionItem:hover{
+
+  transform:translateY(-4px);
+
+  border-color:rgba(225,6,0,.18);
+
+  box-shadow:
+      0 20px 45px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.activeItem{
+
+  background:linear-gradient(
+      135deg,
+      #17181D,
+      #222833
+  );
+
+  border-color:transparent;
+
+  box-shadow:
+      0 30px 70px rgba(15,23,42,.18);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.accordionHeader{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:28px 34px;
+
+}
+
+/* ==========================================================
+   LEFT HEADER
+========================================================== */
+
+.leftHeader{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:22px;
+
+}
+
+.index{
+
+  font-size:15px;
+
+  font-weight:700;
+
+  color:#E10600;
+
+  min-width:38px;
+
+}
+
+.leftHeader h3{
+
+  margin:0;
+
+  font-size:24px;
+
+  font-weight:700;
+
+  color:#111827;
+
+  transition:.35s;
+
+}
+
+.activeItem .leftHeader h3{
+
+  color:#ffffff;
+
+}
+
+/* ==========================================================
+   ICON BUTTON
+========================================================== */
+
+.iconButton{
+
+  width:48px;
+
+  height:48px;
+
+  border:none;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:#F5F5F5;
+
+  color:#111827;
+
+  transition:.35s;
+
+}
+
+.activeItem .iconButton{
+
+  background:#E10600;
+
+  color:#ffffff;
+
+  transform:rotate(180deg);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content{
+
+  overflow:hidden;
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.contentGrid{
+
+  display:grid;
+
+  grid-template-columns:1fr 360px;
+
+  gap:40px;
+
+  align-items:center;
+
+  padding:
+
+      0
+
+      34px
+
+      34px;
+
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.contentText{
+
+  color:#D4D7DD;
+
+  line-height:1.9;
+
+  margin-bottom:28px;
+
+}
+
+/* ==========================================================
+   POINTS
+========================================================== */
+
+.points{
+
+  list-style:none;
+
+  padding:0;
+
+  margin:0;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+}
+
+.points li{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  color:#ffffff;
+
+}
+
+.points li svg{
+
+  color:#E10600;
+
+  flex-shrink:0;
+
+}
+
+/* ==========================================================
+   IMAGE WRAPPER
+========================================================== */
+
+.imageWrapper{
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  min-height:320px;
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+  background:linear-gradient(
+      135deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+  );
+
+  border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   RED AMBIENT GLOW
+========================================================== */
+
+.imageWrapper::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+
+  height:260px;
+
+  border-radius:50%;
+
+  background:rgba(225,6,0,.18);
+
+  filter:blur(70px);
+
+  z-index:0;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.image{
+
+  position:relative;
+
+  z-index:2;
+
+  width:82%;
+
+  height:auto;
+
+  object-fit:contain;
+
+  transition:transform .55s ease;
+
+}
+
+.activeItem:hover .image{
+
+  transform:
+      translateY(-8px)
+      scale(1.03);
+
+}
+
+/* ==========================================================
+   GRID PATTERN
+========================================================== */
+
+.imageWrapper::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+
+      linear-gradient(
+          rgba(255,255,255,.05) 1px,
+          transparent 1px
+      ),
+
+      linear-gradient(
+          90deg,
+          rgba(255,255,255,.05) 1px,
+          transparent 1px
+      );
+
+  background-size:28px 28px;
+
+  mask-image:
+
+      radial-gradient(
+          circle,
+          black,
+          transparent 78%
+      );
+
+  z-index:1;
+
+}
+
+/* ==========================================================
+   SOFT HIGHLIGHT
+========================================================== */
+
+.activeItem{
+
+  position:relative;
+
+}
+
+.activeItem::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+
+  left:0;
+
+  width:100%;
+
+  height:4px;
+
+  background:linear-gradient(
+      90deg,
+      #E10600,
+      #ff7a7a
+  );
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.activeItem:hover{
+
+  box-shadow:
+
+      0 40px 90px rgba(15,23,42,.22),
+
+      0 0 50px rgba(225,6,0,.10);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.contentGrid{
+
+grid-template-columns:1fr 320px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.contentGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.imageWrapper{
+
+margin-top:32px;
+
+min-height:260px;
+
+}
+
+.graphic{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.accordionHeader{
+
+padding:22px;
+
+}
+
+.leftHeader{
+
+gap:14px;
+
+}
+
+.leftHeader h3{
+
+font-size:20px;
+
+}
+
+.contentGrid{
+
+padding:
+
+0
+
+22px
+
+22px;
+
+}
+
+.imageWrapper{
+
+min-height:220px;
+
+}
+
+.quoteCard{
+
+margin-bottom:50px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.heading{
+
+font-size:2rem;
+
+}
+
+.description{
+
+font-size:15px;
+
+}
+
+.image{
+
+width:78%;
+
+}
+
+.imageWrapper{
+
+min-height:190px;
+
+border-radius:20px;
+
+}
+
+.iconButton{
+
+width:42px;
+
+height:42px;
+
+}
+
+}
