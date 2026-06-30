@@ -226,7 +226,7 @@ export default function TestimonialsSection() {
 
                             <motion.div
 
-                                key={testimonial.image}
+                                key={testimonial.id}
 
                                 initial={{
                                     opacity: 0,
