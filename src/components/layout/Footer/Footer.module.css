@@ -1,0 +1,885 @@
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0F172A 0%,
+            #0B1120 100%
+        );
+
+    color:#ffffff;
+
+    padding:120px 0 50px;
+
+}
+
+/* ==========================================================
+   BACKGROUND EFFECTS
+========================================================== */
+
+.bgGlow{
+
+    position:absolute;
+
+    top:-220px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            rgba(225,6,0,.18),
+            transparent 68%
+        );
+
+    filter:blur(80px);
+
+    pointer-events:none;
+
+}
+
+.bgRingOne{
+
+    position:absolute;
+
+    bottom:-450px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:1600px;
+
+    height:1600px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.035);
+
+}
+
+.bgRingTwo{
+
+    position:absolute;
+
+    bottom:-520px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:1850px;
+
+    height:1850px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(225,6,0,.06);
+
+}
+
+/* Optional Noise */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.035;
+
+    background-image:
+
+        radial-gradient(#fff 1px,transparent 1px);
+
+    background-size:22px 22px;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:auto;
+
+    margin-bottom:90px;
+
+}
+
+.hero img{
+
+    margin:auto;
+
+    margin-bottom:34px;
+
+}
+
+.hero h2{
+
+    font-size:clamp(2rem,3vw,3.2rem);
+
+    line-height:1.08;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+}
+
+.hero h2 span{
+
+    display:block;
+
+    color:#ff554c;
+
+    margin-top:12px;
+
+}
+
+.hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+   TECH STACK
+========================================================== */
+
+.techStack{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:16px;
+
+}
+
+.techItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#E2E8F0;
+
+    transition:.35s;
+
+    cursor:default;
+
+    backdrop-filter:blur(14px);
+
+}
+
+.techItem svg{
+
+    color:#ff554c;
+
+}
+
+.techItem:hover{
+
+    transform:translateY(-5px);
+
+    background:#E10600;
+
+    color:#ffffff;
+
+    border-color:#E10600;
+
+    box-shadow:
+
+        0 16px 35px rgba(225,6,0,.28);
+
+}
+
+.techItem:hover svg{
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
+   HERO DIVIDER
+========================================================== */
+
+.hero::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:1px;
+
+    margin-top:70px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.12),
+
+            transparent
+
+        );
+
+}
+
+/* ==========================================================
+   AMBIENT ANIMATION
+========================================================== */
+
+.bgGlow{
+
+    animation:footerGlow 8s ease-in-out infinite;
+
+}
+
+@keyframes footerGlow{
+
+    0%{
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+}
+
+.bgRingOne{
+
+    animation:rotateRing 45s linear infinite;
+
+}
+
+.bgRingTwo{
+
+    animation:rotateRingReverse 60s linear infinite;
+
+}
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:
+            translateX(-50%)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translateX(-50%)
+            rotate(360deg);
+
+    }
+
+}
+
+@keyframes rotateRingReverse{
+
+    from{
+
+        transform:
+            translateX(-50%)
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+            translateX(-50%)
+            rotate(0deg);
+
+    }
+
+}
+
+/* ==========================================================
+   FOOTER GRID
+========================================================== */
+
+.grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1.35fr .8fr;
+
+    gap:55px;
+
+    margin-bottom:70px;
+
+}
+
+.column h4{
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    position:relative;
+
+}
+
+.column h4::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:42px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:#E10600;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.linkList{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.footerLink{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    transition:.35s;
+
+}
+
+.footerLink span{
+
+    transition:.35s;
+
+}
+
+.linkArrow{
+
+    opacity:0;
+
+    transform:translate(-8px,8px);
+
+    transition:.35s;
+
+}
+
+.footerLink:hover{
+
+    color:#ffffff;
+
+}
+
+.footerLink:hover span{
+
+    transform:translateX(8px);
+
+}
+
+.footerLink:hover .linkArrow{
+
+    opacity:1;
+
+    color:#E10600;
+
+    transform:translate(0);
+
+}
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contactList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contactCard{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:
+
+        rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s;
+
+}
+
+.contactCard:hover{
+
+    transform:translateY(-4px);
+
+    background:
+
+        rgba(255,255,255,.07);
+
+    border-color:
+
+        rgba(225,6,0,.25);
+
+}
+
+.contactIcon{
+
+    width:48px;
+
+    height:48px;
+
+    flex-shrink:0;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(225,6,0,.10);
+
+    color:#ff554c;
+
+}
+
+.contactCard span{
+
+    display:block;
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+    margin-bottom:6px;
+
+}
+
+.contactCard p{
+
+    margin:0;
+
+    color:#F8FAFC;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+/* ==========================================================
+   SOCIAL
+========================================================== */
+
+.socials{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+
+.social{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#E2E8F0;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.social:hover{
+
+    background:#E10600;
+
+    color:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 18px 40px rgba(225,6,0,.28);
+
+}
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.divider{
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.12),
+
+            transparent
+
+        );
+
+    margin-bottom:34px;
+
+}
+
+/* ==========================================================
+   COPYRIGHT
+========================================================== */
+
+.bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    color:#94A3B8;
+
+    font-size:15px;
+
+}
+
+.bottom p{
+
+    margin:0;
+
+}
+
+.bottomLinks{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.bottomLinks a{
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.bottomLinks a:hover{
+
+    color:#ff554c;
+
+}
+
+/* ==========================================================
+   BACK TO TOP
+========================================================== */
+
+.backTop{
+
+    
+    margin:50px auto 0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 30px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #E10600,
+
+            #ff554c
+
+        );
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 20px 45px rgba(225,6,0,.25);
+
+}
+
+.backTop:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 30px 60px rgba(225,6,0,.35);
+
+}
+
+.backTop svg{
+
+    transition:.35s;
+
+}
+
+.backTop:hover svg{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:45px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+    padding:90px 0 40px;
+
+}
+
+.hero{
+
+    margin-bottom:60px;
+
+}
+
+.grid{
+
+    grid-template-columns:1fr;
+
+    gap:38px;
+
+}
+
+.techStack{
+
+    justify-content:center;
+
+}
+
+.bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.bottomLinks{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:16px;
+
+}
+
+.backTop{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+}
+
+
+.bgGlow,
+.bgRingOne,
+.bgRingTwo {
+    pointer-events: none;
+}
