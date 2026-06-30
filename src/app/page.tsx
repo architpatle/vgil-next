@@ -1,5 +1,6 @@
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import FeaturesSection from "@/components/home/FeaturesSection";
+import FoundersSection from "@/components/home/FoundersSection";
 import Hero from "@/components/Home/Hero";
 import LogoCarousel from "@/components/home/LogoCarousel";
 import ProductsSection from "@/components/home/ProductsSection";
@@ -18,6 +19,7 @@ export default function HomePage() {
       {/* <FeaturedProducts /> */}
       <ProductsSection />
       <FeaturesSection />
+      <FoundersSection />
 
       <section className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h2 className="text-5xl font-bold text-black">
