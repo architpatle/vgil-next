@@ -1,3 +1,9 @@
+import testImg1 from '@/assets/images/testimonials/testimonial-1.png'
+import testImg2 from '@/assets/images/testimonials/testimonial-2.png'
+import testImg3 from '@/assets/images/testimonials/testimonial-3.png'
+import testImg4 from '@/assets/images/testimonials/testimonial-4.png'
+import testImg5 from '@/assets/images/testimonials/testimonial-5.png'
+
 export const testimonials = [
 
     {
@@ -13,7 +19,7 @@ export const testimonials = [
         designation:
             "CEO, The Bhandara District Central Co-operative Bank Ltd.",
 
-        image: "/images/testimonials/banking.png",
+        image: testImg1
     },
 
     {
@@ -29,7 +35,7 @@ export const testimonials = [
         designation:
             "Managing Director",
 
-        image: "/images/testimonials/ai.png",
+        image: testImg2
     },
 
     {
@@ -45,7 +51,7 @@ export const testimonials = [
         designation:
             "Chief Information Officer",
 
-        image: "/images/testimonials/security.png",
+        image: testImg3
     },
 
     {
@@ -61,7 +67,7 @@ export const testimonials = [
         designation:
             "General Manager",
 
-        image: "/images/testimonials/mis.png",
+        image:testImg4
     },
 
     {
@@ -77,7 +83,7 @@ export const testimonials = [
         designation:
             "Executive Director",
 
-        image: "/images/testimonials/automation.png",
+        image: testImg5
     },
 
 ];
