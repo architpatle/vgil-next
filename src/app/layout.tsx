@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Navbar from "@/components/Layout/Navbar/Navbar";
+import Navbar from "@/components/layout/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Virtual Galaxy Infotech",
