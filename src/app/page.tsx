@@ -1,3 +1,4 @@
+import CTASection from "@/components/home/CTASection";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import FoundersSection from "@/components/home/FoundersSection";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <FeaturesSection />
       <FoundersSection />
       <TestimonialsSection />
+      <CTASection />
 
       <section className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h2 className="text-5xl font-bold text-black">
